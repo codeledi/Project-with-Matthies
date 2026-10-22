@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing – Pulse: Cash Flow Management</title>
+    <meta
+      name="description"
+      content="Try Pulse free for 30 days. See why Pulse is the best way to monitor your cash flow."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ── RESET & BASE ── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Work Sans", sans-serif;
+        background: #eafaf1;
+        color: #080c16;
+        text-align: center;
+      }
+
+      a {
+        color: #00ad6a;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      ul {
+        list-style: none;
+        text-align: left;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* ── HEADER & NAV ── */
+      .site-header {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 20px;
+      }
+
+      .logo {
+        font-size: 48px;
+        font-weight: 800;
+        color: #00ad6a;
+        letter-spacing: -3px;
+        line-height: 1;
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 38px;
+      }
+
+      .site-nav a {
+        color: #444;
+      }
+
+      .site-nav .active {
+        color: #080c16;
+      }
+
+      .site-nav .signup {
+        border: 2px solid #00ad6a;
+        padding: 8px 14px;
+        color: #080c16;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 56px;
+        line-height: 1.1;
+        margin-top: 30px;
+      }
+
+      .hero p {
+        max-width: 540px;
+        margin: 22px auto 90px;
+        line-height: 1.7;
+      }
+
+      /* ── PLANS ── */
+      .plans-section {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .plans {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .basics {
+        width: 270px;
+        margin-right: 50px;
+        text-align: left;
+        line-height: 1.5;
+        color: #444;
+        flex-shrink: 0;
+      }
+
+      .basics h3 {
+        color: #00ad6a;
+        margin-bottom: 20px;
+      }
+
+      .basics li {
+        margin: 0 0 6px 15px;
+        list-style: disc;
+      }
+
+      .basics p {
+        margin-top: 24px;
+      }
+
+      .basics a {
+        color: #080c16;
+        text-decoration: underline;
+        font-weight: 400;
+      }
+
+      .card {
+        background: #fff;
+        width: 365px;
+        padding-bottom: 40px;
+        flex-shrink: 0;
+      }
+
+      .card.main {
+        border: 1px solid #00ad6a;
+        align-self: flex-start;
+      }
+
+      .card.side {
+        border: 1px solid #d6dae5;
+        border-left: 0;
+        align-self: flex-end;
+        margin-bottom: 20px;
+      }
+
+      .card > .card-label {
+        display: block;
+        padding: 7px;
+        background: #00ad6a;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .card.side > .card-label {
+        padding: 15px 40px;
+        background: #d6dae5;
+        color: #444;
+        font-weight: 400;
+      }
+
+      .card h2 {
+        color: #00ad6a;
+        font-size: 40px;
+        line-height: 1.1;
+        margin-top: 30px;
+      }
+
+      .card.side h2 {
+        font-size: 34px;
+        font-weight: 500;
+      }
+
+      .price {
+        font-size: 21px;
+        color: #777;
+        margin: 12px 0 24px;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #1fe374;
+        color: #080c16;
+        font-size: 19px;
+        font-weight: 700;
+        padding: 15px 30px;
+      }
+
+      .card h4 {
+        font-size: 12px;
+        margin: 34px 0 10px;
+        text-align: center;
+      }
+
+      .card ul {
+        padding: 0 30px;
+        line-height: 1.6;
+      }
+
+      .card li {
+        margin-bottom: 14px;
+      }
+
+      .card li::before {
+        content: "✓ ";
+        color: #00ad6a;
+      }
+
+      /* ── TESTIMONIAL ── */
+      .quote {
+        padding: 90px 20px 100px;
+      }
+
+      .quote-avatar {
+        width: 74px;
+        height: 74px;
+        margin: 0 auto 30px;
+        border-radius: 50%;
+        background: #ccc;
+        overflow: hidden;
+      }
+
+      .quote blockquote {
+        font-size: 24px;
+        line-height: 1.6;
+        margin-bottom: 22px;
+        font-style: normal;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* ── FAQ ── */
+      .faq-section {
+        background: #fff;
+        padding: 80px 20px 100px;
+      }
+
+      .faq-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .faq-inner > h2 {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 50px;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 44px 80px;
+      }
+
+      .faq-item h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #080c16;
+      }
+
+      .faq-item p {
+        color: #444;
+        line-height: 1.75;
+        font-size: 15px;
+      }
+
+      .faq-item p + p {
+        margin-top: 10px;
+      }
+
+      /* ── FOOTER ── */
+      .site-footer {
+        background: #080c16;
+        color: #fff;
+        padding: 60px 20px 30px;
+        text-align: left;
+      }
+
+      .footer-top {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 50px;
+      }
+
+      .footer-brand .logo {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .footer-brand .btn {
+        font-size: 15px;
+        padding: 14px 22px;
+      }
+
+      .footer-nav {
+        display: flex;
+        gap: 80px;
+      }
+
+      .footer-nav h4 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+      }
+
+      .footer-nav a {
+        display: block;
+        color: #00ad6a;
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #1e2430;
+        padding-top: 24px;
+        gap: 20px;
+      }
+
+      .footer-bottom p {
+        color: #777;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      .footer-bottom a {
+        color: #777;
+        font-weight: 400;
+        text-decoration: underline;
+      }
+
+      .btn-contact {
+        flex-shrink: 0;
+        background: transparent;
+        border: 2px solid #00ad6a;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 10px 20px;
+        letter-spacing: 0.04em;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 980px) {
+        .plans {
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+
+        .basics {
+          width: 100%;
+          max-width: 500px;
+          margin-right: 0;
+        }
+
+        .card.side {
+          border-left: 1px solid #d6dae5;
+          align-self: auto;
+          margin-bottom: 0;
+        }
+
+        .card.main {
+          align-self: auto;
+        }
+
+        .footer-top {
+          flex-direction: column;
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .site-header {
+          flex-direction: column;
+          gap: 24px;
+          padding: 30px 20px;
+        }
+
+        .site-nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
+        }
+
+        .logo {
+          font-size: 36px;
+        }
+
+        .hero h1 {
+          font-size: 36px;
+        }
+
+        .hero p {
+          margin-bottom: 50px;
+        }
+
+        .card {
+          width: 100%;
+          max-width: 420px;
+        }
+
+        .quote blockquote {
+          font-size: 18px;
+        }
+
+        .faq-inner > h2 {
+          font-size: 36px;
+        }
+
+        .faq-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+
+        .footer-nav {
+          flex-wrap: wrap;
+          gap: 36px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ── HEADER ── -->
+    <header class="site-header">
+      <a href="#" class="logo" aria-label="Pulse – Home">pulse</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#">Features</a>
+        <a href="#">Customer Stories</a>
+        <a href="#" class="active" aria-current="page">Pricing</a>
+        <a href="#">Blog</a>
+        <a href="#" class="signup">Sign Up</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ── HERO ── -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <h1 id="hero-heading">Try Pulse free for<br />30 days.</h1>
+        <p>
+          See why Pulse is the best way to monitor your cash flow. Sign up for
+          any plan and try Pulse absolutely free for 30 days.
+        </p>
+      </section>
+
+      <!-- ── PLANS ── -->
+      <section class="plans-section" aria-labelledby="plans-heading">
+        <h2 id="plans-heading" class="sr-only">Pricing Plans</h2>
+        <div class="plans">
+          <!-- Pulse Basics sidebar -->
+          <aside
+            class="basics"
+            aria-label="Pulse Basics – included in every plan"
+          >
+            <h3>
+              These are what we call the Pulse Basics. They're what every
+              customer gets.
+            </h3>
+            <ul>
+              <li>
+                Manage cash flow on a daily, weekly, monthly, or yearly basis
+              </li>
+              <li>
+                Forecast growth with recurring income or expenses that scale
+                automatically
+              </li>
+              <li>Works with any currency</li>
+              <li>
+                See Money In and Money Out, categorize transactions, and run
+                helpful reports
+              </li>
+              <li>
+                Toggle entries and accounts on and off to game out different
+                scenarios
+              </li>
+            </ul>
+            <p>
+              Just need the Pulse Basics?<br />
+              <a href="#">Get them now</a> for $29 per month.
+            </p>
+          </aside>
+
+          <!-- Small Business Plan -->
+          <article class="card main" aria-labelledby="plan-small">
+            <span class="card-label">RECOMMENDED</span>
+            <h2 id="plan-small">Small Business Plan</h2>
+            <p class="price">$59 per month</p>
+            <a href="#" class="btn">Sign Up Now</a>
+            <h4>YOU GET PULSE BASICS, PLUS:</h4>
+            <ul>
+              <li>Manage cash flow across multiple financial accounts</li>
+              <li>
+                Invite your investors, book keeper, or management team to see
+                reports or manage cash flow
+              </li>
+              <li>
+                Integrate with QuickBooks Online for more accurate cash flow
+              </li>
+              <li>
+                Track your actual cash flow alongside your projected cash flow
+              </li>
+            </ul>
+          </article>
+
+          <!-- Premium Plan -->
+          <article class="card side" aria-labelledby="plan-premium">
+            <span class="card-label"
+              >Complex business with multiple financial accounts, currencies, or
+              auditing needs?</span
+            >
+            <h2 id="plan-premium">Unlock Extra Features</h2>
+            <p class="price">$89 per month</p>
+            <a href="#" class="btn">Try Premium</a>
+            <h4>GET IT ALL, PLUS:</h4>
+            <ul>
+              <li>Manage cash flow across unlimited financial accounts</li>
+              <li>
+                Convert to any currency for localized cash flow reporting and
+                projections
+              </li>
+              <li>
+                Attach invoices or contracts to your cash flow entries for
+                accountability and auditing
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── TESTIMONIAL ── -->
+      <section class="quote" aria-label="Customer testimonial">
+        <div
+          class="quote-avatar"
+          role="img"
+          aria-label="Subvert Marketing Inc."
+        ></div>
+        <blockquote>
+          <p>
+            "Pulse is worth every penny because it empowers business owners with
+            critical financial insight and knowledge."
+          </p>
+        </blockquote>
+        <a href="#">SUBVERT MARKETING, INC.</a>
+      </section>
+
+      <!-- ── FAQ ── -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <div class="faq-inner">
+          <h2 id="faq-heading">FAQ</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>How does the 30-day free trial work?</h3>
+              <p>
+                You can use Pulse absolutely free for 30 days. After 30 days, we
+                will charge the credit card you used when you sign up. If you
+                choose to cancel your account before your trial ends, your card
+                will not be charged.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>
+                If I upgrade an existing account, do I get another free trial?
+              </h3>
+              <p>
+                Brand new accounts are the only ones eligible for a 30-day free
+                trial. If you upgrade an existing account, your credit card will
+                be billed the new amount on the date of your next billing cycle.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What is a "Financial Account"?</h3>
+              <p>
+                Financial Accounts are a grouping of income and expense items
+                that can be used for tracking or reporting purposes.
+              </p>
+              <p>
+                They're designed to be flexible and can be used to differentiate
+                between bank accounts, companies, individuals or between
+                personal and business entries.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Do I have to commit to a long-term contract?</h3>
+              <p>
+                No. There is no contract when you use Pulse, other than agreeing
+                to our Terms of Service.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Will I be able to cancel my account if I don't use Pulse?</h3>
+              <p>
+                Yes – you can cancel your account at any time. To cancel your
+                account, go to your billing page and click on "Please cancel my
+                account" at the bottom of the page. The account owner is the
+                only one who can cancel an account. An email request to delete
+                an account is not considered cancellation.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What types of payments do you accept?</h3>
+              <p>
+                We accept payments made online using Visa, Mastercard, Discover,
+                and American Express.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo" aria-label="Pulse – Home">pulse</a>
+          <a href="#" class="btn">Sign Up for a Free 30-Day Trial</a>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div>
+            <h4>Product</h4>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Sign Up</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="#">Customer Stories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <a href="#">Support</a>
+            <a href="#">Blog</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          ©2019 Pulseapp.com, Inc. All Rights Reserved |
+          <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> |
+          <a href="#">EU Privacy</a><br />
+          Pulse is made by <a href="#">Simple Focus</a>. We also make
+          <a href="#">Ballpark</a>, <a href="#">Sifter</a>, and
+          <a href="#">Curated</a>.
+        </p>
+        <a href="#" class="btn btn-contact">CONTACT US</a>
+      </div>
+    </footer>
+  </body>
+</html>
