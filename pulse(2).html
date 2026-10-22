@@ -1,0 +1,112 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
+
+  .pulse, .pulse * { box-sizing: border-box; margin: 0; padding: 0; }
+  .pulse {
+    font-family: "Work Sans", sans-serif; background: #eafaf1; color: #080c16; text-align: center;
+
+    a { color: #00ad6a; text-decoration: none; font-weight: 600; }
+    ul { list-style: none; text-align: left; }
+    header, section { max-width: 1100px; margin: 0 auto; }
+
+    header, nav, .plans { display: flex; align-items: center; }
+    header { justify-content: space-between; padding: 40px 0; }
+    nav { gap: 38px; }
+    nav .active { color: #080c16; }
+    nav .signup { border: 2px solid #00ad6a; padding: 8px 14px; }
+    .logo { font-size: 48px; font-weight: 800; color: #00ad6a; letter-spacing: -3px; }
+
+    h1 { font-size: 56px; line-height: 1.1; margin-top: 30px; }
+    h1 + p { max-width: 540px; margin: 22px auto 90px; line-height: 1.7; }
+
+    .plans { justify-content: center; }
+    .basics { width: 270px; margin-right: 50px; text-align: left; line-height: 1.5; color: #444; }
+    .basics h3 { color: #00ad6a; margin-bottom: 20px; }
+    .basics li { margin: 0 0 6px 15px; list-style: disc; }
+    .basics p { margin-top: 24px; }
+    .basics a { color: #080c16; text-decoration: underline; font-weight: 400; }
+
+    .card { background: #fff; width: 365px; padding-bottom: 40px; }
+    .main { border: 1px solid #00ad6a; align-self: flex-start; }
+    .side { border: 1px solid #d6dae5; border-left: 0; align-self: flex-end; margin-bottom: 20px; }
+    .card > span { display: block; padding: 7px; background: #00ad6a; color: #fff; font-size: 12px; font-weight: 700; }
+    .side > span { padding: 15px 40px; background: #d6dae5; color: #444; font-weight: 400; }
+    .card h2 { color: #00ad6a; font-size: 40px; line-height: 1.1; margin-top: 30px; }
+    .side h2 { font-size: 34px; font-weight: 500; }
+    .price { font-size: 21px; color: #777; margin: 12px 0 24px; }
+    .btn { display: inline-block; background: #1fe374; color: #080c16; font-size: 19px; font-weight: 700; padding: 15px 30px; }
+    .card h4 { font-size: 12px; margin: 34px 0 10px; }
+    .card ul { padding: 0 30px; line-height: 1.6; }
+    .card li { margin-bottom: 14px; }
+    .card li::before { content: "✓ "; color: #00ad6a; }
+
+    .quote { padding: 90px 20px 100px; }
+    .quote div { width: 74px; height: 74px; margin: 0 auto 30px; border-radius: 50%; background: #ccc; }
+    .quote p { font-size: 24px; line-height: 1.6; margin-bottom: 22px; }
+  }
+</style>
+
+<div class="pulse">
+  <header>
+    <div class="logo">pulse</div>
+    <nav>
+      <a href="#">Features</a>
+      <a href="#">Customer Stories</a>
+      <a href="#" class="active">Pricing</a>
+      <a href="#">Blog</a>
+      <a href="#" class="signup">Sign Up</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Try Pulse free for<br>30 days.</h1>
+    <p>See why Pulse is the best way to monitor your cash flow. Sign up for any plan and try Pulse absolutely free for 30 days.</p>
+  </div>
+
+  <section class="plans">
+    <div class="basics">
+      <h3>These are what we call the Pulse Basics. They’re what every customer gets.</h3>
+      <ul>
+        <li>Manage cash flow on a daily, weekly, monthly, or yearly basis</li>
+        <li>Forecast growth with recurring income or expenses that scale automatically</li>
+        <li>Works with any currency</li>
+        <li>See Money In and Money Out, categorize transactions, and run helpful reports</li>
+        <li>Toggle entries and accounts on and off to game out different scenarios</li>
+      </ul>
+      <p>Just need the Pulse Basics?<br><a href="#">Get them now</a> for $29 per month.</p>
+    </div>
+
+    <div class="card main">
+      <span>RECOMMENDED</span>
+      <h2>Small Business Plan</h2>
+      <p class="price">$59 per month</p>
+      <a href="#" class="btn">Sign Up Now</a>
+      <h4>YOU GET PULSE BASICS, PLUS:</h4>
+      <ul>
+        <li>Manage cash flow across multiple financial accounts</li>
+        <li>Invite your investors, book keeper, or management team to see reports or manage cash flow</li>
+        <li>Integrate with QuickBooks Online for more accurate cash flow</li>
+        <li>Track your actual cash flow alongside your projected cash flow</li>
+      </ul>
+    </div>
+
+    <div class="card side">
+      <span>Complex business with multiple financial accounts, currencies, or auditing needs?</span>
+      <h2>Unlock Extra Features</h2>
+      <p class="price">$89 per month</p>
+      <a href="#" class="btn">Try Premium</a>
+      <h4>GET IT ALL, PLUS:</h4>
+      <ul>
+        <li>Manage cash flow across unlimited financial accounts</li>
+        <li>Convert to any currency for localized cash flow reporting and projections</li>
+        <li>Attach invoices or contracts to your cash flow entries for accountability and auditing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div></div>
+    <p>“Pulse is worth every penny because it empowers business owners with critical financial insight and knowledge.”</p>
+    <a href="#">SUBVERT MARKETING, INC.</a>
+  </section>
+</div>
